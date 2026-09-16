@@ -1,6 +1,5 @@
 import { useEffect, useState } from 'react'
 
-// 1. Import the background image asset
 import bgImage from './assets/img.jpg' 
 
 import { TodoForm } from '../@/components/TodoForm'
@@ -34,14 +33,15 @@ function App() {
   }
 
   return (
-    
     <main 
-      className="flex min-h-svh items-center justify-center bg-cover bg-center bg-no-repeat"
+      className="flex min-h-svh items-center justify-center bg-cover bg-center bg-no-repeat p-4"
       style={{ backgroundImage: `url(${bgImage})` }}
     >
-      <Card className="w-full max-w-md">
+      <Card className="w-full max-w-md bg-white/15 backdrop-blur-lg border border-white/30 shadow-2xl text-white">
         <CardHeader>
-          <CardTitle>Simple Todo List</CardTitle>
+          <CardTitle className="text-white text-center text-xl font-semibold tracking-wide">
+            Simple Todo List
+          </CardTitle>
         </CardHeader>
 
         <CardContent className="space-y-4">
