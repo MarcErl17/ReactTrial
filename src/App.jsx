@@ -1,16 +1,16 @@
 import { useEffect, useState } from 'react'
 
+// 1. Import the background image asset
+import bgImage from './assets/img.jpg' 
+
 import { TodoForm } from '../@/components/TodoForm'
 import { TodoList } from '../@/components/TodoList'
 import { Card, CardContent, CardHeader, CardTitle } from '../@/components/ui/card'
 
 const STORAGE_KEY = 'todos'
 
-
 function App() {
-
   const [todos, setTodos] = useState([])
-
 
   useEffect(() => {
     const saved = localStorage.getItem(STORAGE_KEY)
@@ -34,7 +34,11 @@ function App() {
   }
 
   return (
-    <main className="flex min-h-svh items-center justify-center bg-muted p-4">
+    
+    <main 
+      className="flex min-h-svh items-center justify-center bg-cover bg-center bg-no-repeat"
+      style={{ backgroundImage: `url(${bgImage})` }}
+    >
       <Card className="w-full max-w-md">
         <CardHeader>
           <CardTitle>Simple Todo List</CardTitle>

@@ -4,7 +4,7 @@ import { Button } from '../components/ui/button'
 
 export function TodoItem({ todo, onDelete }) {
   return (
-    <li className="flex items-center gap-3 rounded-md px-2 py-2 hover:bg-accent">
+    <li className="flex items-center gap-3 rounded-md px-2 py-2 hover:bg-accent ring-blue-300">
       <span className="flex-1 text-sm">{todo.title}</span>
       <Button
         variant="ghost"
